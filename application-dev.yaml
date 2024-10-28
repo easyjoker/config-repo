@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://172.16.10.169:26391;databaseName=dev_robot_data;SendStringParametersAsUnicode=false;encrypt=true;trustServerCertificate=true;datetimeParameterType=datetime;queryTimeout=30;cancelQueryTimeout=1;
+    username: rd_user
+    password: KTHU4sI*n+ahz43SWj57
+    hikari:
+      max-idle: 20
+      initial-size: 10
+      idle-timeout: 300000
+      max-active: 100
+      test-on-borrow: true
+      connection-timeout: 30000
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8601/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+
